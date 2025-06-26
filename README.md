@@ -1,7 +1,7 @@
 
 # 🫀 ECG Arrhythmia Classification using Deep CNN
 
-This project presents a deep learning approach to classify ECG beats into arrhythmic categories using a 1D Convolutional Neural Network (CNN). It is based on the MIT-BIH Arrhythmia Database and aims to detect early signs of cardiovascular irregularities like premature beats or bundle branch blocks.
+This project presents a deep learning approach to classify ECG beats into arrhythmic categories using a Convolutional Neural Network (CNN). It is based on the MIT-BIH Arrhythmia Database and aims to detect early signs of cardiovascular irregularities like premature beats or bundle branch blocks.
 
 ---
 
@@ -79,38 +79,6 @@ Flatten ➝ Dense(128) ➝ Output(Dense softmax)
 | Recall     | Balanced except rare classes |
 
 The model performs extremely well on the majority class (**N**) and reasonably on arrhythmic beats. Performance on rare beats (like **A** and **V**) is limited due to class imbalance.
-
----
-
-## ▶️ How to Use
-
-### 1. Install Requirements
-```bash
-pip install wfdb numpy pandas tensorflow scikit-learn matplotlib seaborn
-```
-
-### 2. Train the Model
-```bash
-python train_model.py
-```
-
-### 3. Predict on a New Record
-```bash
-python predict_on_new_record.py
-```
-
-This will generate:
-- A prediction bar chart per beat type.
-- A CSV file with beat distribution.
-- A sample plot of predictions.
-
----
-
-## ⚠️ Limitations
-
-- **Class Imbalance:** Minor beat types like A & V are under-represented.
-- **Overfitting Risk:** Model may overfit with low data diversity.
-- **Generalizability:** Performance may vary on unseen ECG datasets.
 
 ---
 
